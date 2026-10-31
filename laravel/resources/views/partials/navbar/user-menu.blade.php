@@ -2,7 +2,7 @@
     @auth
         <ul class="p-2 text-sm text-body font-medium" aria-labelledby="user-menu-button">
             <li>
-                <a href="#" class="inline-flex items-center w-full p-2 hover:bg-gray-400 dark:hover:bg-gray-700 rounded">Profil</a>
+                <a href="{{ route('profile.edit') }}" class="inline-flex items-center w-full p-2 hover:bg-gray-400 dark:hover:bg-gray-700 rounded">Profil</a>
             </li>
             <li>
                 <a href="#" class="inline-flex items-center w-full p-2 hover:bg-gray-400 dark:hover:bg-gray-700 rounded">Könyveim</a>

@@ -3,6 +3,7 @@
 require __DIR__.'/auth.php';
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -12,11 +13,18 @@ Route::get('/about', function () {
     return view('about');
 });
 
+Route::middleware('auth')->prefix('profile')->name('profile.')->group(function () {
+    Route::get('/', [ProfileController::class, 'edit'])->name('edit');
+    Route::patch('/', [ProfileController::class, 'update'])->name('update');
+    Route::put('/password', [ProfileController::class, 'updatePassword'])->name('password');
+    Route::delete('/', [ProfileController::class, 'destroy'])->name('destroy');
+});
+
+
 /*Route::get('/scanner', function () {
     return view('scanner');
-});*/
-
-/*Route::get('/api/book/{isbn}', function (string $isbn) {
+});
+Route::get('/api/book/{isbn}', function (string $isbn) {
     // Sanitize ISBN - only allow digits and X
     $isbn = preg_replace('/[^0-9X]/', '', strtoupper($isbn));
 
