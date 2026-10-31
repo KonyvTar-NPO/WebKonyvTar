@@ -6,7 +6,6 @@
         </a>
 
         <div class="flex relative items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-
             <button type="button" class="flex text-sm rounded-full md:me-0" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
                 <img class="md:w-8 md:h-8 w-6 h-6 rounded-full" src="{{asset("pfp.jpg")}}" alt="user photo">
             </button>

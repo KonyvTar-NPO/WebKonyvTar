@@ -1,4 +1,4 @@
-{{-- input styling for the input forms --}}
+{{-- styling for the input forms --}}
 @props(['name', 'label', 'type' => 'text', 'id' => null, 'form' => null])
 
 @php $id ??= $name; @endphp

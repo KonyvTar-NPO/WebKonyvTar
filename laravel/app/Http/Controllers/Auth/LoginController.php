@@ -48,7 +48,8 @@ class LoginController extends Controller
         $request->session()->regenerate();
         UserSession::startFor($request, Auth::user(), $remember);
 
-        return redirect()->intended('/');
+        return redirect()->intended('/')
+            ->with('status', 'Üdv újra, '.Auth::user()->first_name.'!');
     }
 
     public function destroy(Request $request): RedirectResponse
@@ -59,6 +60,7 @@ class LoginController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect()->intended('/')
+            ->with('status', 'Sikeresen kijelentkezett!');
     }
 }

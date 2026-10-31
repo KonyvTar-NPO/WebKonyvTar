@@ -96,8 +96,7 @@
                onclick="event.preventDefault(); openDialog('register-dialog')">
                 Regisztráció
             </a>
-            {{--<a href="{{ route('password.request') }}">Elfelejtett jelszó?</a>--}}
-        </p>
+        <p class="mt-4 text-center text-sm"><a class="text-blue-700 hover:underline dark:text-blue-400" href="{{ route('password.request') }}">Elfelejtett jelszó?</a></p>
     </div>
 </dialog>
 

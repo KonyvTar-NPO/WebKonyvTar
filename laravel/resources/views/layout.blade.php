@@ -31,8 +31,9 @@
     @include('partials.navbar')
 </header>
 
+@include('partials.flash')
+
 <main class="flex-1 w-full pt-4 px-5 md:px-20">
-    @if (session('status')) <p>{{ session('status') }}</p> @endif
     @yield('content')
 </main>
 

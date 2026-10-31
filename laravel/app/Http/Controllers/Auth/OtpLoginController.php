@@ -102,6 +102,7 @@ class OtpLoginController extends Controller
         $request->session()->regenerate();
         UserSession::startFor($request, $user);
 
-        return redirect()->intended('/');
+        return redirect()->intended('/')
+            ->with('status', 'Üdv újra, '.Auth::user()->first_name.'!');
     }
 }

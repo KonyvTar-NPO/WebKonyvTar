@@ -1,4 +1,3 @@
-{{-- partials/navbar/user-menu.blade.php --}}
 <div id="user-dropdown" class="z-50 absolute top-13.5 -right-3 hidden rounded-lg bg-gray-300 text-gray-700 border-gray-700 dark:text-gray-300 dark:bg-gray-800 dark:border-gray-300 dark:border-1 dark:divide-gray-300 border-2 divide-y w-44">
     @auth
         <ul class="p-2 text-sm text-body font-medium" aria-labelledby="user-menu-button">
