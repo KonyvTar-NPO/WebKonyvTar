@@ -1,0 +1,5 @@
+https://10.167.243.244 {
+	tls ../laravel/ssl/10.167.243.244.pem ../laravel/ssl/10.167.243.244-key.pem
+
+	reverse_proxy 127.0.0.1:8080
+}
