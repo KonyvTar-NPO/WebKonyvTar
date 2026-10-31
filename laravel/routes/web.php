@@ -1,7 +1,10 @@
 <?php
 
+require __DIR__.'/auth.php';
+
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\PasswordLoginController;
 use App\Http\Controllers\OtpLoginController;
 
@@ -17,12 +20,17 @@ Route::get('/about', function () {
     return view('scanner');
 });*/
 
+/*
+Route::post('/register', [RegisterController::class, 'store'])
+    ->middleware('guest')
+    ->name('register');
+
 Route::get('/login', fn () => redirect('/'))->name('login');
 Route::post('/login', [PasswordLoginController::class, 'store'])->middleware('throttle:10,1');
 
 Route::post('/login/otp/send', [OtpLoginController::class, 'send'])->middleware('throttle:5,1');
 Route::post('/login/otp/verify', [OtpLoginController::class, 'verify'])->middleware('throttle:10,1');
-
+*/
 /*Route::get('/api/book/{isbn}', function (string $isbn) {
     // Sanitize ISBN - only allow digits and X
     $isbn = preg_replace('/[^0-9X]/', '', strtoupper($isbn));
